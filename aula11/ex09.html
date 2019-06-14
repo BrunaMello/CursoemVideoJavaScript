@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1 { 
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20pt;
+        }
+        div#msn{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16pt;
+        }
+        input{
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <h1>Validacao de Estrageiro</h1>
+    <input type="text" name="texto" id="texto">
+    <input type="button" value="validar" onclick="validar()" >
+    <div id="msn">Clique para Validar</div>
+    <Script>
+        function validar() {
+            var text = document.getElementById('texto')
+            var msn = document.getElementById('msn')
+            text = String(text.value)
+            if (text == 'Brasil') {
+                msn.innerHTML = `Validado como Brasileiro`
+            } else {
+                msn.innerHTML = `Voce e ${text} nao validado`
+            }
+        }
+    
+    
+    
+    </Script>
+
+    
+</body>
+</html>

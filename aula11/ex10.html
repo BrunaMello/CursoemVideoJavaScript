@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detran</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font: normal 18pt Arial;
+            color: red
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+            color: blue;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" id="vel">
+    <input type="button" value="calcular" onclick="calcular()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        function calcular() {
+            var vel = document.getElementById('vel')
+            var res = document.getElementById('res')
+            var vel = Number(vel.value)
+            if (vel >= 61) {
+                res.innerHTML = <p>`Sua velocidade e <strong>${vel}</strong>. MULTADO`</p>
+                } else {
+                    res.innerHTML = `Sua velocidade e ${vel}. Pode seguir viagem`
+                }
+        }
+    
+    
+    </script>
+
+
+    
+</body>
+</html>
